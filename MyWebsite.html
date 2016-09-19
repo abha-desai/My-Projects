@@ -1,0 +1,49 @@
+<html>
+<head>
+<link href="MyWebsite.css" rel="stylesheet" type="text/css">
+
+<script language="JavaScript">
+    function showInput() {
+    document.getElementById('display').innerHTML = 
+                    document.getElementById("fname").value;
+    document.getElementById('display1').innerHTML = 
+                    document.getElementById("lname").value;
+	 document.getElementById('display2').innerHTML = 
+                    document.getElementById("email").value;	
+	 document.getElementById('display3').innerHTML = 
+                    document.getElementById("address").value;									
+	
+	}
+  </script>
+</head>
+<body>
+<form action="" method="post">
+  <h1>Form</h1>
+  
+  <p>
+    <label for="Firstname">First Name:</label>
+    <input type="text" id="fname" name="Firstname" autofocus>
+  </p>
+  <p>
+    <label for="Lastname">Last Name:</label>
+    <input type="text" id="lname" name="LastName">
+  </p>  
+  <p>
+    <label for="Email">Email:</label>
+    <input type="text" id="email" name="Email">
+  </p>  
+  <p>
+    <label for="Address">Address:</label>
+    <input type="text" id="address" name="Address">
+  </p>  
+  <p>
+    <input type="button" name="send" value="Submit" onClick="showInput()";>
+    <p><span id='display'></span></p>
+    <p><span id='display1'></span></p>
+    <p><span id='display2'></span></p>
+    <p><span id='display3'></span>
+ 
+</form>
+
+</body>
+</html>
