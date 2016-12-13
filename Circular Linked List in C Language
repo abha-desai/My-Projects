@@ -1,0 +1,140 @@
+//The main purpose of this program is to create a circular link list or a list which contains nodes (with data and address part).
+
+#include<stdio.h>
+#include<conio.h>
+#include<alloc.h>
+void main()                                          
+{
+int i,loc,a;
+struct node
+{
+int info;
+struct node *next;
+}*start=NULL;                                         //LINKLIST INSERTION
+typedef struct node NODE;
+NODE *ptr,*temp,*temp2,*temp3,*temp4;
+
+
+clrscr();
+printf("enter 5 values for the nodes");
+for(i=0;i<5;i++)                                      //node creation
+{
+ptr=(NODE*)malloc(sizeof(NODE));
+scanf("%d",&ptr->info);
+ptr->next=NULL;
+if (start==NULL)
+{
+start=ptr;
+temp=ptr;
+}
+else
+{
+temp->next=ptr;
+temp=ptr;
+}
+}
+temp->next=start;
+temp2=start;
+for (i=0;i<7;i++)
+{
+printf("%d \t",temp2->info);
+printf("%d\n",temp2->next);
+temp2=temp2->next;
+}
+printf("press 1 to insert a node at a specified position\npress 2 to insert a node at last \npress 3 to delete a node \n");
+scanf("%d",&a);
+switch(a)
+{
+case 1:
+//insertion at a specific point
+ptr=(NODE*)malloc(sizeof(NODE));
+printf("enter value");
+scanf("%d",&ptr->info);
+printf("",ptr);
+printf("where to insert");
+scanf("%d",&loc);
+temp3=start;
+if(loc==1)
+{
+
+start=ptr;
+
+ptr->next=temp3;
+
+}
+else
+{
+for(i=0;i<loc-2;i++)
+{
+temp3=temp3->next;
+}
+ptr->next=temp3->next;
+temp3->next=ptr;
+}
+temp3=start;
+for(i=0;i<5;i++)
+{
+temp3=temp3->next;
+}
+temp3->next=start;
+temp4=start;
+for(i=0;i<8;i++)
+{
+printf("%d\n",temp4->info);
+printf("%d\n",temp4->next);
+temp4=temp4->next;
+}
+break;
+
+case 2:
+
+//insert at end
+ptr=(NODE*)malloc(sizeof(NODE));
+printf("enter value");
+scanf("%d",&ptr->info);
+ptr->next=start;
+temp2=start;
+for(i=0;i<5;i++)
+{
+if (i==4)
+{
+temp2->next=ptr;
+}
+else
+temp2=temp2->next;
+}
+temp2=start;
+for (i=0;i<6;i++)
+{
+printf("%d\n",temp2->info);
+printf("%d\n",temp2->next);
+temp2=temp2->next;
+}
+break;
+
+
+case 3:
+//deletion from specified position
+printf("which position to delete from");
+scanf("%d",&loc);
+temp2=start;
+temp3=start;
+for(i=0;i<loc-2;i++)
+{
+temp2=temp2->next;
+temp3=temp3->next;
+}
+temp3=temp3->next;
+temp2->next=temp3->next;
+temp2=start;
+for(i=0;i<5;i++)
+{
+printf("%d\n",temp2->info);
+temp2=temp2->next;
+}
+break;
+default :
+printf("invalid option");
+}
+getch();
+}
