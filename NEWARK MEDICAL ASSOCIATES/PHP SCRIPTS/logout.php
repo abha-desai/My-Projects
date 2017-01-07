@@ -1,0 +1,1 @@
+<?php// Initialize the session.// If you are using session_name("something"), don't forget it now!session_set_cookie_params(0);session_start();session_destroy();header ("Location: logout_success.php");exit;?>

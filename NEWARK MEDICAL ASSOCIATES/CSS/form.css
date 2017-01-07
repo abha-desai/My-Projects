@@ -1,0 +1,55 @@
+
+
+.form_main
+{
+	padding:20px;
+	border: solid 1px #5381AD;
+	width:600px;
+	font-family: 'Open Sans', sans-serif;
+	display:inline-block;
+	margin-top:30px;
+	margin-bottom:30px;
+	
+}
+
+.form_h2
+{
+	color: #5381AD;
+}
+
+.form_label
+{
+	font-size:16px;
+}
+.form_input
+{
+	width:250px;
+	height:25px;
+	font-size:16px;
+	color:black;
+}
+
+.form_textarea
+{
+	width:250px;
+	height:125px;
+	font-size:16px;
+	font-family: "Open Sans",sans-serif;
+	color:black;
+}
+
+.form_submit
+{
+	width: 130px;
+	height: 50px;
+	margin-top: 10px;
+	font-size: 20px;
+	background-color:#5381AD;
+	color:white;
+	cursor:pointer;
+}
+
+.form_submit:hover
+{
+	background-color:#7AA8D3;
+}
