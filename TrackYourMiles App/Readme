@@ -1,0 +1,4 @@
+This is a HTML5/jQuery Mobile application which allows you to enter the miles and date for each run that you have made.
+Runs can be added, updated and deleted.
+Use of HTML5 localStorage() API and the jQuery Mobile framework;
+Use of JSON objects and converting data types
