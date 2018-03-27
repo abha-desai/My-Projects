@@ -1,0 +1,7 @@
+This is a React based App which is backward and cross-browser compatible.
+User will enter the location in the search field and the weather forecast information is displayed.
+The widget then provides a list of potential sports that the user could engage in that would  be appropriate for the current weather conditions in the location they entered.
+Widget uses AJAX to get data from the Open Weather Map.Creating the Ajax request with the Fetch API.
+JQuery is used for animation.
+Transpiled the ES6 code to ES5 using BABEL (Babel extension in Visual Studio Code)
+Included Polyfills for Fetch API and Promise to make it work in the older browsers.
